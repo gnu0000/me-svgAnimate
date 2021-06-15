@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+      .view {text-align: center; max-height: 100%}   
+      svg {width: 100%; max-width:800px; height: auto}
+      .controls {
+         display: flex; 
+//         border: 1px solid red;
+      }
+      .slider {
+         flex: 1;
+//         border: 1px solid green;
+         padding: 8px 1em;
+      }
+      .slider input {
+         margin: 0;
+//         border: 1px solid blue;
+         width: 100%;
+      }
+      p {
+         margin: 5px;
+      }
+
+   </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="x.js"></script>
+</head>
+<body>
+   <div class="view">
+      <h2 class="open">SVG polygon animation test</h2>
+      <svg id="svg1" height="1000" width="1000" viewBox="0 0 1000 1000"></svg>
+      <div>
+         <button class="animate">Animate Scene</button>
+         <button class="step">Step</button>
+         <button class="test">Test</button>
+      </div>
+      <div class="controls control1">
+         <div class="slider radius">
+            <p>Transform #1 Radius <span></span></p>
+            <input type="range" min="0"         max="500"  value="300" data-e="0r">
+         </div>
+         <div class="slider speed">
+            <p>Transform #1 Speed <span></span></p>
+            <input type="range" min="-1000"     max="1000" value="300" data-e="0s">
+         </div>
+         <div class="slider count">
+            <p>Transform #1 Count <span></span></p>
+            <input type="range" min="1"         max="100"  value="300" data-e="0c">
+         </div>
+      </div>
+
+      <div class="controls control2">
+         <div class="slider radius">
+            <p>Transform #2 Radius <span></span></p>
+            <input type="range" min="0"         max="500"  value="300" data-e="1r">
+         </div>
+         <div class="slider speed">
+            <p>Transform #2 Speed <span></span></p>
+            <input type="range" min="-1000"     max="1000" value="300" data-e="1s">
+         </div>
+         <div class="slider count">
+            <p>Transform #2 Count <span></span></p>
+            <input type="range" min="1"         max="100"  value="300" data-e="1c">
+         </div>
+      </div>
+
+      <div class="controls control3">
+         <div class="slider radius">
+            <p>Transform #3 Radius <span></span></p>
+            <input type="range" min="0"         max="500"  value="300" data-e="2r">
+         </div>
+         <div class="slider speed">
+            <p>Transform #3 Speed <span></span></p>
+            <input type="range" min="-1000"     max="1000" value="300" data-e="2s">
+         </div>
+         <div class="slider count">
+            <p>Transform #3 Count <span></span></p>
+            <input type="range" min="1"         max="100"  value="300" data-e="2c">
+         </div>
+      </div>
+   </div>
+</body>
+</html>

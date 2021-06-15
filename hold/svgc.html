@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+   .test-partners {
+      clear: both;
+      border: 2px solid green;
+      text-align: center;
+   }
+   .chev {
+      display: inline-block;
+      border: 1px solid red;
+      transform:rotateX(0deg);
+   }
+
+   @keyframes draw {
+     0% {
+      transform:rotateX(0deg);
+     }
+     100% {
+      transform:rotateX(180deg);
+     }
+   }
+   .chev:hover polygon {
+      -webkit-animation: 0.5s draw linear forwards;
+      animation: 0.5s draw linear forwards;
+   }
+
+   </style>
+</head>
+<body>
+   <div class="test-partners">
+      <div class="chev">
+         <svg height="50" width="100">
+            <polygon class="shape1" points="0,0 75,37.5 50,50, 0,25"    style="fill:#468bc9" />
+            <polygon class="shape2" points="100,0 100,25 75,37.5 50,25" style="fill:#3C6184" />
+         </svg>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="index.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="index.js"></script>
+      <title>SVG Anim</title>
+   </head>
+   <body>
+      <div id="header">
+         <h2>SVG polygon animation test</h2>
+      </div>
+      <div id="content">
+         <div id="view">
+            <svg id="svg1" height="1000" width="1000" viewBox="0 0 1000 1000"></svg>
+         </div>
+         <div id="buttons">
+            <div>
+               <button class="animate">Animate Scene</button>
+               <button class="step">Step</button>
+               <button class="save">Save</button>
+            </div>
+            <div class="controls">
+               <div class="slider"><p>Transform #1 Radius <span></span></p><input type="range" min="0"     max="500"  data-e="0r"></div>
+               <div class="slider"><p>Transform #1 Speed  <span></span></p><input type="range" min="-1000" max="1000" data-e="0s"></div>
+               <div class="slider"><p>Transform #1 Count  <span></span></p><input type="range" min="1"     max="100"  data-e="0c"></div>
+            </div>
+            <div class="controls">
+               <div class="slider"><p>Transform #2 Radius <span></span></p><input type="range" min="0"     max="500"  data-e="1r"></div>
+               <div class="slider"><p>Transform #2 Speed  <span></span></p><input type="range" min="-1000" max="1000" data-e="1s"></div>
+               <div class="slider"><p>Transform #2 Count  <span></span></p><input type="range" min="1"     max="100"  data-e="1c"></div>
+            </div>
+            <div class="controls">
+               <div class="slider"><p>Transform #3 Radius <span></span></p><input type="range" min="0"     max="500"  data-e="2r"></div>
+               <div class="slider"><p>Transform #3 Speed  <span></span></p><input type="range" min="-1000" max="1000" data-e="2s"></div>
+               <div class="slider"><p>Transform #3 Count  <span></span></p><input type="range" min="1"     max="100"  data-e="2c"></div>
+            </div>
+            <div class="state-buttons">
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

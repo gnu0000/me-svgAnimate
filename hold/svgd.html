@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <style>
+   .test-partners {
+      clear: both;
+      border: 2px solid green;
+      text-align: center;
+   }
+   .chevron h3 {
+      font-size: 1.5rem;
+      margin: 0.5rem;
+   }
+
+   .chevron .open {
+      -webkit-transition: opacity 0.3s ease-in-out;
+      opacity: 1;
+   }
+
+   .chevron .close {
+       -webkit-transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+   }
+
+   .chevron.up .open {
+      opacity: 0;
+   }
+   .chevron.up .close {
+      opacity: 1;
+   }
+
+
+
+   .chevron .pik {
+      display: inline-block;
+   }
+
+   .chevron.up .pik {
+      -webkit-animation: 0.3s draw linear forwards;
+      animation: 0.5s draw linear forwards;
+   }
+
+   @keyframes draw {
+     from { transform:rotateX(0deg);   }
+     to   { transform:rotateX(180deg); }
+   }
+
+   .chevron.down .pik {
+      -webkit-animation: 0.3s draw2 linear forwards;
+      animation: 0.5s draw2 linear forwards;
+   }
+
+   @keyframes draw2 {
+     from { transform:rotateX(180deg); }
+     to   { transform:rotateX(0deg);   }
+   }
+
+
+
+   </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script>
+      $(function() {
+         $(".up").click(function(){
+            $(".chevron").removeClass("down").addClass("up");
+         });
+         $(".down").click(function(){
+            $(".chevron").removeClass("up").addClass("down");
+         });
+      });
+   </script>
+</head>
+<body>
+   <div class="test-partners">
+      <div class="chevron down">
+         <h3 class="open">Our Partners</h3>
+         <div class="pik">
+            <svg height="50" width="100">
+               <polygon points="0,0 75,37.5 50,50, 0,25"    style="fill:#468bc9" />
+               <polygon points="100,0 100,25 75,37.5 50,25" style="fill:#3C6184" />
+            </svg>
+         </div>
+         <h3 class="close">Back to Top</h3>
+      </div>
+   </div>
+   <button class="up">Up</button>
+   <button class="down">Down</button>
+</body>
+</html>
