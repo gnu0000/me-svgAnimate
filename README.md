@@ -1,4 +1,7 @@
 # me-svgAnimate
-sample svg animation via javascript
 
-https://craig-fitzgerald.com/
+Sample svg animation via javascript.
+
+This code is pretty old.
+
+http://craig/jsexamples/svg/
